@@ -1,0 +1,50 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead />
+    <title>{title}</title>
+  </head>
+  <body>
+    <NavBar />
+    <h1>{title}</h1>
+    <main>
+      <slot /> <!-- your content is injected here -->
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  html {
+    color-scheme: light dark;
+    background-color: #504945;
+  }
+
+  body {
+    font-family: system-ui;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  main {
+    width: min(65ch, 100% - 4rem);
+    margin-inline: auto;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      background-color: #282828;
+    }
+  }
+
+ h1 {
+   text-align: center; 
+ }
+</style>
