@@ -28,12 +28,12 @@ $(function () {
      * Comment the lines out to remove the grid
      */
 
-    // for (let i = 100; i < canvas.width; i += 100) {
-    //   createPlatform(i, canvas.height, -1, -canvas.height);
-    // }
-    // for (let i = 100; i < canvas.height; i += 100) {
-    //   createPlatform(canvas.width, i, -canvas.width, -1);
-    // }
+    //for (let i = 100; i < canvas.width; i += 100) {
+    //  createPlatform(i, canvas.height, -1, -canvas.height);
+    //}
+    //for (let i = 100; i < canvas.height; i += 100) {
+    //  createPlatform(canvas.width, i, -canvas.width, -1);
+    //}
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE BELOW THIS POINT///////////
@@ -44,8 +44,15 @@ $(function () {
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
 
+    createPlatform(100, 700, 100, 5);
+    createPlatform(200, 600, 100, 5);
+    createPlatform(300, 500, 100, 5);
 
-
+    createPlatform(600, 450, 100, 5);
+    createPlatform(300, 350, 100, 5);
+    createPlatform(600, 250, 100, 5);
+    createPlatform(1000, 250, 100, 5);
+    
     
     // TODO 2
     // Create collectables
@@ -54,6 +61,9 @@ $(function () {
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
 
+    createCollectable("steve", 500, 200); // creates a "steve" collectible at the coordinates (500, 300), falling with a high gravity of 20, and bouncing with 50% bounce
+    createCollectable("grace", 500, 300); // creates a "grace" collectible at the coordinates (500, 300), falling with default gravity and bouncing with default bounce %
+    createCollectable("diamond", 1000, 200);
 
 
     // TODO 3
@@ -62,7 +72,9 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 
-
+    createCannon("bottom", 500, 1200, 50, 50);
+    createCannon("bottom", 400, 1200, 50, 50);
+    createCannon("top", 900, 1200, 50, 50);
 
 
     /////////////////////////////////////////////////
