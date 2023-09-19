@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+interface Frontmatter {
+  title: string;
+  author: string;
+  date: string;
+  image: string;
+}
+
 const posts = await Astro.glob<Frontmatter>('./*.mdx');
 ---
 

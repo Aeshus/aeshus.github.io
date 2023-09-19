@@ -3,31 +3,64 @@
 const page = Astro.url.pathname.split('/')[0];
 
 ---
-<header>
-	<div>
-		<b><span>Thomas</span></b>
-		<img src="/favicon.svg" alt="logo" />
-		<b><span>Aeshus</span></b>
-	</div>
+<div>
 	<nav>
-		<a href="/" aria-current={page == "" ? "page" : undefined}>
-			<b>Aeshus</b>
-			<img src="/favicon.svg" alt="logo" />
-			<b>Thomas</b>
-		</a>
-		<a href="/posts" aria-current={page == "latest" ? "page" : undefined}>
-			Latest
-		</a>
-		<a href="/projects" aria-current={page == "posts" ? "page" : undefined}>
-			Posts
-		</a>
-		<a href="/projects" aria-current={page == "projects" ? "page" : undefined}>
-			Projects
-		</a>
+		<ul>
+			<li><a href="/" aria-current={page == "" ? "page" : undefined}>
+				<span>Thomas</span>
+			</a></li>
+			<li><a href="/posts" aria-current={page == "latest" ? "page" : undefined}>
+				Latest
+			</a></li>
+			<li><a href="/projects" aria-current={page == "posts" ? "page" : undefined}>
+				Posts
+			</a></li>
+			<li><a href="/projects" aria-current={page == "projects" ? "page" : undefined}>
+				Projects
+			</a></li>
+		</ul>
 	</nav>
-	<hr />
-</header>
+</div>
 
 <style>
+	nav {
+		display: flex;
+		flex-direction: row;
+		gap: 4rem;
+		align-content: start;
+		
+		width: 100%;
+	}
+	
+	div {
+		margin-top: 1rem;
+	    max-width: 65rem;
+	    width: 100%;
+	    margin-inline: auto;
+	    margin-left: 2rem;
+	    margin-right: 2rem;
+		
+		padding-bottom: 1em;
+	}
+	
+	ul {
+		display: flex;
+	    list-style: none;
+		flex-direction: row;
+		width: 100%;
+		padding-left: 0px;
+		
+		gap: 3rem;
+	}
+	
+	
+	a {
+		text-decoration: none;
+	}
+</style>
 
+<style is:global>
+	* {
+		line-height: calc(1em + 0.725rem)
+	}
 </style>

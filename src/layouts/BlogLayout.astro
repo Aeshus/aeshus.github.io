@@ -19,19 +19,18 @@ import BlogHead from '../components/BlogHead.astro';
 ---
 
 <html lang="en">
-      <head>
-	<BaseHead title={frontmatter.title} />
-	<BlogHead title={frontmatter.title} description={frontmatter.description} image={frontmatter.image} author={frontmatter.author} tags={frontmatter.tags} />
-      </head>
+	<head>
+		<BaseHead title={frontmatter.title} />
+		<BlogHead title={frontmatter.title} description={frontmatter.description} image={frontmatter.image} author={frontmatter.author} tags={frontmatter.tags} />
+	</head>
+	<body>
+		<NavBar />
+		<h1>{frontmatter.title}</h1>
+		<p>Written by: {frontmatter.author}</p>
+		<p>Published on: {frontmatter.date}</p>
 
-      <body>
-	<NavBar />
-	<h1>{frontmatter.title}</h1>
-	<p>Written by: {frontmatter.author}</p>
-	<p>Published on: {frontmatter.date}</p>
-
-	<p>Tags: {frontmatter.tags}</p>
-	<img src={frontmatter.image} />
-	<slot />
-      </body>
+		<p>Tags: {frontmatter.tags}</p>
+		<img src={frontmatter.image} />
+		<slot />
+	</body>
 </html>
