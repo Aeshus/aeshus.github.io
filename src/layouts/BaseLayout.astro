@@ -1,0 +1,34 @@
+---
+import BaseHead from "../components/BaseHead.astro"
+import NavBar from "../components/NavBar.astro"
+---
+
+<html lang="en" dir="auto">
+	<head>
+		<BaseHead />
+	</head>
+	
+	<body>
+		<NavBar />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	main {
+		width: 100%;
+		max-width: 50vw;
+	}
+</style>
