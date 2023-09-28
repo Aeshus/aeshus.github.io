@@ -120,20 +120,13 @@
 			*/
 			function handleBoxClick(e) {
 				
-				xVector *= 1.1;
-				yVector *= 1.1;
+				xVector *= -1.1;
+				yVector *= -1.1;
 				
-				var x = (45 - e.offsetX);
-				var y = (45 - e.offsetY);
 				
 				var boxMagnitude = Math.sqrt(xVector**2 + yVector**2);
-				var clickMagnitude = Math.sqrt(x**2 + y**2);
-				
-				var unitX = x / clickMagnitude;
-				var unitY = y / clickMagnitude;
-				
-				xVector = unitX * boxMagnitude;
-				yVector = unitY * boxMagnitude;
+	
+								
 				
 				score++;
 				changeBoxText(score);
