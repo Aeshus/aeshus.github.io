@@ -20,12 +20,22 @@
 		.board{
 			height: 100vh;
 		}
+		
+		img {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			user-select: none;
+		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
 </head>
 <body class="board">
 	<!-- HTML for the box -->
+	
+	<div>
+		<img src="https://melindaklewis.files.wordpress.com/2009/05/photo_frame_2.jpg" width=1000 height=800 style="margin-left: -50px; margin-top: -50px;"/>
+	</div>
 	<div class="box">?</div>
 
 	<script>
@@ -62,28 +72,71 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
+			var xPosition = 200;
+			var yPosition = 200;
 			
+			var xVector = 1;
+			var yVector = 1;
+			
+			var score = 0;
+			
+			draw();
+			changeBoxText(score);
 
+			var top = 125;
+			var bottom = 500;
+
+			var left = 150;
+			var right = 700;
 			
+		
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
+				xPosition += xVector;
+				yPosition += yVector;
 				
-
+				if (yPosition < top || yPosition > bottom) 
+					yVector *= -1;
+					
+				if (xPosition < left || xPosition > right)
+					xVector *= -1;
+				
+				draw();
 			};
+			
+			function draw() {
+				box.css("left", xPosition);
+				box.css("top", yPosition);
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
-			function handleBoxClick() {
+			function handleBoxClick(e) {
 				
-
-
+				xVector *= 1.1;
+				yVector *= 1.1;
+				
+				var x = (45 - e.offsetX);
+				var y = (45 - e.offsetY);
+				
+				var boxMagnitude = Math.sqrt(xVector**2 + yVector**2);
+				var clickMagnitude = Math.sqrt(x**2 + y**2);
+				
+				var unitX = x / clickMagnitude;
+				var unitY = y / clickMagnitude;
+				
+				xVector = unitX * boxMagnitude;
+				yVector = unitY * boxMagnitude;
+				
+				score++;
+				changeBoxText(score);
 			};
 		})();
 	</script>
