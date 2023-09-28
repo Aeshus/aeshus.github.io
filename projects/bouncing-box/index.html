@@ -73,6 +73,7 @@
 			
 			// Reads the size of the page at loading
 			// Sites these days are supposed to be "responsive" or something?
+			// Also I'm too lazy to hardcode it
 			var rightWall = window.innerWidth;
 			var leftWall = 0;
 			
@@ -108,7 +109,11 @@
 				
 				// TODO 7 bugfix but impl. better
 				// It keeps the sign of the original while adding it's absolute value
-				speed = Math.sign(speed) * (Math.abs(speed) + 3)
+				if (speed < 0)
+					speed -= 3
+					
+				if (speed >= 0)
+					speed += 3
 				
 				changeBoxText(points);
 
