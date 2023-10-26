@@ -6,3 +6,6 @@ title = 'My New Hugo Site'
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.highlight]
+  noClasses=false

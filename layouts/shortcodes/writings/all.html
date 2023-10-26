@@ -1,0 +1,15 @@
+<ul class="postList" aria-label="Post List">
+  {{ range (where .Site.Pages "Section" "writings" ) }}
+    {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .Permalink }}" aria-label="{{ .Title }} ({{ .Date | time.Format "2006-01-02" }})">
+          <time datetime="{{ .Date | time.Format "2006-01-02" }}">
+            {{ .Date | time.Format "2006-01-02"}}
+          </time>
+          
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

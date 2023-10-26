@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/site.css">
+    {{ partial "head" . }}
   </head>
 
   <body>
+    {{ partial "navbar" . }}
     <main>
       <article>
         {{ block "content" . }}{{ end }}
           </article>
     </main>
+    {{ partial "footer" . }}
   </body>
 </html>

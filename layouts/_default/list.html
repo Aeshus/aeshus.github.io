@@ -1,5 +1,5 @@
 {{ define "content" }}
-  <h2>Posts</h2>
+  {{ .Content }}
   <ul>
     {{ range .Pages.ByDate }}
       <li>

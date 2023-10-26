@@ -1,0 +1,15 @@
+{{ define "content" }}
+  <header>
+    <div>
+      <time datetime="{{ .Date | time.Format "2006-01-02"}}">{{ .Date | time.Format "Jan 2, 2006"}}</time>
+    </div>
+    <h1>{{ .Title }}</h1>
+    <div>
+      <span>{{ .WordCount }} words</span>
+      &middot;
+      <span>{{ .ReadingTime }} minutes</span>
+    </div>
+  </header>
+  <br />
+  {{ .Content }}
+{{ end }}
