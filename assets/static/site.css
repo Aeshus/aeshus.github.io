@@ -3,7 +3,7 @@
   --bg: white;
   --tx: #3a4145;
   --tx-head: black;
-  --accent: #0069FF;
+  --accent: #0069ff;
 
   /* Font options */
   --min-font: 18;
@@ -22,9 +22,8 @@
     --bg: #1f1f1f;
     --tx: #f0f0f0;
     --tx-head: white;
-    --accent: #0069FF;
+    --accent: #0069ff;
   }
-
 
   nav svg {
     filter: invert(1);
@@ -36,8 +35,18 @@ html {
 
   /* Credit Tobias Ahlin 
      https://tobiasahlin.com/blog/responsive-fluid-css-type-scales/ */
-  --font-size: calc(var(--min-font) * 1px + ((var(--max-font) - var(--min-font)) * (100cqw - var(--screen-min) * 1px) / (var(--screen-max) - var(--screen-min))));
-  font-size: clamp(var(--min-font) * 1px, var(--font-size), var(--max-font) * 1px);
+  --font-size: calc(
+    var(--min-font) * 1px +
+      (
+        (var(--max-font) - var(--min-font)) * (100cqw - var(--screen-min) * 1px) /
+          (var(--screen-max) - var(--screen-min))
+      )
+  );
+  font-size: clamp(
+    var(--min-font) * 1px,
+    var(--font-size),
+    var(--max-font) * 1px
+  );
 }
 
 body {
@@ -49,9 +58,9 @@ body {
   height: 100vh;
 
   text-rendering: optimizeLegibility;
-  
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,serif;
 
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, serif;
 }
 
 /* Page Layout */
@@ -85,12 +94,12 @@ nav > div {
   max-width: min(50%, 20ch);
   width: 100%;
   gap: 1em;
-  
+
   display: flex;
   justify-content: space-evenly;
 
   flex-wrap: wrap;
-  
+
   padding-top: 1em;
 }
 
@@ -165,7 +174,12 @@ hr {
   margin: 2em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 0;
@@ -179,7 +193,11 @@ h1 {
   font-size: 2rem;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 1.4rem;
   margin-bottom: 0;
 }
