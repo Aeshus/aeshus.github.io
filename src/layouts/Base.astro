@@ -1,0 +1,19 @@
+---
+import { SITE } from '$/config'
+import BaseHead from "$/components/BaseHead.astro";
+
+const { content } = Astro.props
+---
+
+<html lang="en">
+	<head>
+    <BaseHead title={ content.title ? `${content.title} | ${ SITE.title }` : SITE.title } description={ content.description } image={ SITE.image }/>
+	</head>
+  <body>
+		<slot name="header" />
+		<main>
+			<slot />
+		</main>
+		<slot name="footer" />
+	</body>
+</html>

@@ -1,16 +1,27 @@
 ---
+/* https://github.com/one-aalam/astro-ink */
+import BaseLayout from '$/layouts/Base.astro';
+import { getCollection, getEntryBySlug } from 'astro:content'
 
+const title = 'Home'
+const description = "Aeshus' Personal Website"
+
+const posts = await getCollection('writings')
+const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+
+sortedPosts.map((post) => {
+  console.log(post.data.title);
+});
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout content={{ title, description }}>
+  <h2>Latest Post</h2>
+
+    {sortedPosts.map((post) => (
+      <p><a href={"/writings/" + post.slug}>{post.data.title}</a></p>
+    ))}
+    
+  <h2>Earlier Post</h2>
+  <h2>Projects</h2>
+</BaseLayout>

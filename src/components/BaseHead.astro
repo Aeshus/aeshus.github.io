@@ -1,0 +1,37 @@
+---
+/* https://github.com/one-aalam/astro-ink */
+import { SITE } from "$/config";
+
+import "$/styles/global.css";
+
+export type Props = {
+  title: string;
+  description: string;
+  permalink: string;
+  image: string;
+};
+
+const { title = SITE.title, description, permalink, image } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="icon" type="image/svg" href="/favicon.svg" />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+
+{description && <meta name="description" content={description} />}
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+{permalink && <meta property="og:url" content={permalink} />}
+{description && <meta property="og:description" content={description} />}
+{image && <meta property="og:image" content={image} />}
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content={title} />
+{permalink && <meta property="twitter:url" content={permalink} />}
+{description && <meta property="twitter:description" content={description} />}
+{image && <meta property="twitter:image" content={image} />}
