@@ -1,19 +1,25 @@
 ---
-import { SITE } from '$/config'
-import BaseHead from "$/components/BaseHead.astro";
+import { SITE } from '$/config.ts';
+import BaseHead from '$/components/BaseHead.astro';
+import Nav from '$/components/Nav.astro';
 
-const { content } = Astro.props
+const { content } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-    <BaseHead title={ content.title ? `${content.title} | ${ SITE.title }` : SITE.title } description={ content.description } image={ SITE.image }/>
-	</head>
+  <head>
+    <BaseHead
+      title={content.title ? `${content.title} | ${SITE.title}` : SITE.title}
+      description={content.description}
+      image={""}
+    />
+  </head>
   <body>
-		<slot name="header" />
-		<main>
-			<slot />
-		</main>
-		<slot name="footer" />
-	</body>
+    <Nav />
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
 </html>

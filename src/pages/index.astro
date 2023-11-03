@@ -1,27 +1,31 @@
 ---
 /* https://github.com/one-aalam/astro-ink */
 import BaseLayout from '$/layouts/Base.astro';
-import { getCollection, getEntryBySlug } from 'astro:content'
+import FormattedDate from '$/components/FormattedDate.astro';
+import { getCollection } from 'astro:content';
 
-const title = 'Home'
-const description = "Aeshus' Personal Website"
+const title = 'Home';
+const description = "Aeshus' Personal Website";
 
-const posts = await getCollection('writings')
-const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-
-sortedPosts.map((post) => {
-  console.log(post.data.title);
-});
+const posts = await getCollection('writings');
+const sortedPosts = posts.sort((a, b) => (b.data.date).getTime() - (a.data.date).getTime());
 ---
 
 <BaseLayout content={{ title, description }}>
-  <h2>Latest Post</h2>
-
-    {sortedPosts.map((post) => (
-      <p><a href={"/writings/" + post.slug}>{post.data.title}</a></p>
-    ))}
-    
-  <h2>Earlier Post</h2>
+  <h2>Writings</h2>
+  {
+    sortedPosts.map((post) => (
+      <article aria-label={post.data.title}>
+        <FormattedDate date={post.data.date} />
+        <div>
+          <a href={'/writings/' + post.slug}>{post.data.title}</a>
+        </div>
+      </article>
+    ))
+  }
   <h2>Projects</h2>
 </BaseLayout>
+
+<style>
+
+</style>

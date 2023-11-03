@@ -1,17 +1,18 @@
 ---
 /* https://github.com/one-aalam/astro-ink */
-import { SITE } from "$/config";
+import { SITE } from '$/config.ts';
 
-import "$/styles/global.css";
+import '$/styles/inter.css';
+import '$/styles/global.css';
 
 export type Props = {
   title: string;
   description: string;
-  permalink: string;
   image: string;
 };
 
-const { title = SITE.title, description, permalink, image } = Astro.props;
+const permalink = Astro.url;
+const { title = SITE.title, description, image } = Astro.props;
 ---
 
 <meta charset="utf-8" />
