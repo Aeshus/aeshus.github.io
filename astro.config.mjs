@@ -9,6 +9,7 @@ const __dirname = dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
+
   vite: {
     plugins: [],
     resolve: {
@@ -17,4 +18,5 @@ export default defineConfig({
       }
     },  
   }
+
 });
