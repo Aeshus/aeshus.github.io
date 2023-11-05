@@ -1,1 +1,12 @@
-<p>Hi</p>
+---
+import BaseLayout from "$/layouts/Base.astro";
+import WritingsList from "$/components/WritingsList.astro";
+
+const title = 'Home';
+const description = "Aeshus' Personal Website";
+---
+
+<BaseLayout content={{ title: title, description: description }}>
+  <h1>Writings</h1>
+  <WritingsList />
+</BaseLayout>

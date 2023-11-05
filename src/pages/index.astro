@@ -4,25 +4,17 @@ import BaseLayout from '$/layouts/Base.astro';
 import FormattedDate from '$/components/FormattedDate.astro';
 import { getCollection } from 'astro:content';
 
+import WritingsList from "$/components/WritingsList.astro";
+
 const title = 'Home';
 const description = "Aeshus' Personal Website";
 
-const posts = await getCollection('writings');
-const sortedPosts = posts.sort((a, b) => (b.data.date).getTime() - (a.data.date).getTime());
 ---
 
 <BaseLayout content={{ title, description }}>
   <h2>Writings</h2>
-  {
-    sortedPosts.map((post) => (
-      <article aria-label={post.data.title}>
-        <FormattedDate date={post.data.date} />
-        <div>
-          <a href={'/writings/' + post.slug}>{post.data.title}</a>
-        </div>
-      </article>
-    ))
-  }
+  <WritingsList />
+  
   <h2>Projects</h2>
 </BaseLayout>
 
