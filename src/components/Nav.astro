@@ -1,13 +1,19 @@
 ---
 const url = Astro.url.pathname.split('/')[1];
 const title = url ? url[0].toUpperCase() + url.slice(1) : null;
+
+import { Image } from "astro:assets";
+import pfp from "$/assets/favicon.svg";
 ---
 
 <nav>
   <ul>
     <li aria-hidden="true">
       <a href="/" aria-hidden="true">
-        <img height="40" width="40" src="/favicon.svg" aria-hidden="true"/>
+        <Image 
+          src={pfp} 
+          alt="Profile-picture" 
+          aria-hidden="true" />
       </a>
     </li>
     <li>
