@@ -16,19 +16,31 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout content={entry.data}>
-  <div>
-    <FormattedDate date={entry.data.date}/>
-  </div>
-  <h1>{entry.data.title}</h1>
-  <Content />
+  <header>
+    <h1>{entry.data.title}</h1>
+    <div>
+      <FormattedDate date={entry.data.date}/>
+      <hr />
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    </div>
+  </header>
+  <article>
+    <Content />
+  </article>
 </BaseLayout>
 
 <style>
   h1 {
-    margin-top: 0;
+    margin-bottom: var(--space-2xs);
+    font-weight: 800;
   }
 
   div {
-    font-size: var(--step-1);
+    font-size: var(--step--1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--space-s);
+    color: var(--tx-dim);
   }
 </style>
