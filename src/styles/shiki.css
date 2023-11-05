@@ -1,0 +1,31 @@
+/* You have to override these ones because Astro can't just follow Shiki */
+
+:root {
+  --astro-code-color-text: var(--tx);
+  --astro-code-color-background: var(--bg);
+  --astro-code-token-constant: #0000b0;
+  --astro-code-token-string: #3548cf;
+  --astro-code-token-comment: #7f0000;
+  --astro-code-token-keyword: #531ab6;
+  --astro-code-token-parameter: var(--tx);
+  --astro-code-token-function: var(--tx);
+  --astro-code-token-string-expression: #3548cf;
+  --astro-code-token-punctuation: var(--tx);
+  --astro-code-token-link: var(--tx);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --astro-code-color-text: var(--tx);
+    --astro-code-color-background: var(--bg);
+    --astro-code-token-constant: #00bcff;
+    --astro-code-token-string: #79a8ff;
+    --astro-code-token-comment: #ff9f80;
+    --astro-code-token-keyword: #b6a0ff;
+    --astro-code-token-parameter: var(--tx);
+    --astro-code-token-function: var(--tx);
+    --astro-code-token-string-expression: #79a8ff;
+    --astro-code-token-punctuation: var(--tx);
+    --astro-code-token-link: var(--tx);
+  }
+}
