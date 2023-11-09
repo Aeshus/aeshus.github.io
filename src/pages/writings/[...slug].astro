@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '$/layouts/Base.astro';
-import FormattedDate from "$/components/FormattedDate.astro";
+import FormattedDate from '$/components/FormattedDate.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('writings');
@@ -19,9 +19,11 @@ const { Content } = await entry.render();
   <header>
     <h1>{entry.data.title}</h1>
     <div>
-      <FormattedDate date={entry.data.date}/>
+      <FormattedDate date={entry.data.date} />
       <hr />
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        >CC BY-NC-SA 4.0</a
+      >
     </div>
   </header>
   <article>

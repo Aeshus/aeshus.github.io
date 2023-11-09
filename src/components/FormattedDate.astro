@@ -1,21 +1,20 @@
 ---
 /* https://github.com/withastro/astro/blob/main/examples/blog/src/components/FormattedDate.astro
-
-*/
+ */
 
 interface Props {
-	date: Date;
+  date: Date;
 }
 
 let { date } = Astro.props;
 ---
 
 <time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+  {
+    date.toLocaleDateString('en-us', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    })
+  }
 </time>

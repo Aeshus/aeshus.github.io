@@ -6,7 +6,8 @@ Blog posts are licensed CC BY-NC-SA 4.0!
 
 ## Todo
 
-Minimize the amount of imports for fonts as not all the font weights and varities are needed.
+Minimize the amount of imports for fonts as not all the font weights and
+varities are needed.
 
 ## 🧞 Commands
 
@@ -20,4 +21,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-

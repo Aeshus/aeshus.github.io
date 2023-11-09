@@ -2,18 +2,15 @@
 const url = Astro.url.pathname.split('/')[1];
 const title = url ? url[0].toUpperCase() + url.slice(1) : null;
 
-import { Image } from "astro:assets";
-import pfp from "$/assets/favicon.svg";
+import { Image } from 'astro:assets';
+import pfp from '$/assets/favicon.svg';
 ---
 
 <nav>
   <ul>
     <li aria-hidden="true">
       <a href="/" aria-hidden="true">
-        <Image 
-          src={pfp} 
-          alt="Profile-picture" 
-          aria-hidden="true" />
+        <Image src={pfp} alt="Profile-picture" aria-hidden="true" />
       </a>
     </li>
     <li>
@@ -22,12 +19,12 @@ import pfp from "$/assets/favicon.svg";
     <span aria-hidden="true">
       {title && '·'}
     </span>
-    { title &&
-      <li>
-        <a href={'/' + url}>
-          {title}
-        </a>
-      </li>
+    {
+      title && (
+        <li>
+          <a href={'/' + url}>{title}</a>
+        </li>
+      )
     }
   </ul>
 </nav>

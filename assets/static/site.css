@@ -59,8 +59,14 @@ body {
 
   text-rendering: optimizeLegibility;
 
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
-    Ubuntu, serif;
+  font-family:
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    serif;
 }
 
 /* Page Layout */

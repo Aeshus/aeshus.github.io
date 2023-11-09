@@ -1,9 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-import FormattedDate from "$/components/FormattedDate.astro"
+import { getCollection } from 'astro:content';
+import FormattedDate from '$/components/FormattedDate.astro';
 
-const posts = await getCollection("writings");
-const sortedPosts = posts.sort((a, b) => (b.data.date).getTime() - (a.data.date).getTime());
+const posts = await getCollection('writings');
+const sortedPosts = posts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
 ---
 
 {

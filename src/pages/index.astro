@@ -4,20 +4,23 @@ import BaseLayout from '$/layouts/Base.astro';
 import FormattedDate from '$/components/FormattedDate.astro';
 import { getCollection } from 'astro:content';
 
-import WritingsList from "$/components/WritingsList.astro";
+import WritingsList from '$/components/WritingsList.astro';
+import ProjectsList from '$/components/ProjectsList.astro';
 
 const title = 'Home';
 const description = "Aeshus' Personal Website";
-
 ---
 
 <BaseLayout content={{ title, description }}>
   <h2>Writings</h2>
   <WritingsList />
-  
+
   <h2>Projects</h2>
+  <ProjectsList />
 </BaseLayout>
 
 <style>
-
+  h2 {
+    margin-bottom: 0.5em;
+  }
 </style>
