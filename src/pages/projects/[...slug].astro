@@ -19,32 +19,29 @@ const title = entry.data.title;
 const start = entry.data.startDate;
 const end = entry.data.endDate;
 const github =
-  entry.data.socials.github !== null
-    ? 'https://github.com/' + entry.data.socials.github
+  entry.data.socials?.github !== null
+    ? 'https://github.com/' + entry.data.socials?.github
     : null;
 
-const img = entry.data.image.url;
-const alt = entry.data.image.alt;
+const img = entry.data.image;
 ---
 
 <BaseLayout content={entry.data}>
   <header>
     <h1>{title}</h1>
-    {img ? <Image src={img} alt={alt} /> : null}
+    {img ? <Image src={img.url} alt={img.alt} /> : null}
     <div>
       <span>
         <FormattedDate date={start} />
+        -
         {
           end ? (
-            <>
-              -
-              <FormattedDate date={end} />
-            </>
-          ) : null
+            <FormattedDate date={end} />
+          ) : <span>Today</span>
         }
       </span>
       <hr />
-      {github ? <a href="{entry.data.socials.github}">Github</a> : null}
+      {github ? <a href={github}>Github</a> : null}
     </div>
   </header>
   <article>
