@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.metas.title }}">
+    <link rel="alternate" href="/feed.rss" type="application/rss+xml" title="{{ site.metas.title }}">
+    <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.metas.title }}">    
+    <title>{{ metas.title or site.metas.title }}</title>
+
+    <link rel="stylesheet" href="/site.css" />
+
+
+    <!-- DELETE -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li aria-hidden="true">
+          <a href="/" aria-hidden="true">
+            <img height="50" width="50" src="/favicon.svg" alt="profile picture" aria-hidden="true" />
+            Aeshus
+          </a>
+        </li>
+        <li>
+          <a href="/posts">
+            Posts
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      Copyright
+    </footer>
+  </body>
+</html>

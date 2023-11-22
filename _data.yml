@@ -1,0 +1,10 @@
+metas:
+  site: Aeshus' Blog
+  title: Aeshus' Blog
+  description: Hi :)
+  lang: en
+  generator: true
+author:
+  name: Aeshus
+  email: hi@aeshus.com
+  github: aeshus

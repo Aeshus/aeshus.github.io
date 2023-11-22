@@ -1,0 +1,73 @@
+:root {
+  /* Utopia font */
+  /* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  text-rendering: optimizeLegibility;
+}
+
+main,
+nav,
+footer {
+  margin: auto;
+
+  max-width: min(100% - 2rem, 65ch);
+  width: 100%;
+}
+
+nav {
+  padding-top: 1em;
+}
+nav * {
+  line-height: 0;
+}
+
+nav img {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+}
+
+nav ul {
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
