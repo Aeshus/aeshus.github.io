@@ -18,33 +18,38 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li aria-hidden="true">
-          <a href="/" aria-hidden="true">
-            <img height="50" width="50" src="/favicon.svg" alt="profile picture" aria-hidden="true" />
-            Aeshus
-          </a>
-        </li>
-        <li>
-          <a href="/posts">
-            Posts
-          </a>
-        </li>
-        <li>
-          <a href="/about">
-            About
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <a href="/" aria-label="Home">
+        <img height="50" width="50" src="/favicon.svg" alt="profile picture" aria-hidden="true" />Aeshus
+      </a>
+    </header>
 
     <main>
       {{ content | safe }}
     </main>
 
-    <footer>
-      Copyright
-    </footer>
+    <hr>
+
+    <div role="none">
+      <nav id="nav">
+        Navigation
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts">Posts</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
+
+      <footer>
+        &copy; 2023 Thomas Wilson
+        <div>Commit <a href="https://github.com/aeshus/aeshus.github.io/commit/{{ git.hash }}">{{ git.hash }}</a></div>
+        <ul>
+          <li><a href="/feed.rss"><img class="icon" src="/static/svg/rss.svg" /></a></li>
+          <li><a href="/feed.xml"><img class="icon" src="/static/svg/atom.svg" /></a></li>
+          <li><a href="/feed.json"><img class="icon" src="/static/svg/jsonfeed.svg" /></a></li>
+          <li><a href="/sitemap.xml"><img class="icon" src="/static/svg/sitemap.svg" /></a></li>
+        </ul>
+      </footer>
+    </div>
   </body>
 </html>
