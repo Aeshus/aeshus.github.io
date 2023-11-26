@@ -5,12 +5,17 @@ import feed from "lume/plugins/feed.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
+import date from "lume/plugins/date.ts";
+import readInfo from "lume/plugins/reading_info.ts";
+
+import shiki from "./plugins/shiki.ts";
 
 const site = lume({
-  location: new URL("https://aeshus.com")
+  location: new URL("https://aeshus.com"),
 });
 
 site.ignore("README.md")
+  .copy("static")
   .use(metas())
   .use(favicon())
   .use(feed({
@@ -28,6 +33,8 @@ site.ignore("README.md")
   .use(sitemap())
   .use(resolveUrls())
   .use(lightningCss())
-  
+  .use(date())
+  .use(readInfo())
+  .use(shiki({ theme: "css-variables" }));
 
 export default site;
