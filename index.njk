@@ -2,7 +2,48 @@
 layout: layouts/base.njk
 ---
 
-<p>
-i
-Wow
-</p>
+<section class="intro" aria-label="Introduction">
+  <h2>Heya, I'm Aeshus</h2>
+  <p>I'm a student programmer trying to do some cool stuff :)</p>
+
+  <ul class="contact">
+    <li aria-label="Email">
+      <img class="icon" src="/static/svg/mail.svg" />
+      <a href="mailto:%68%69&commat;%61%65%73%68%75%73%2e%63%6f%6d"><span>mailto:</span>hi&commat;aeshus<!--.example-->.com</a>
+    <li>
+    <li aria-label="Github">
+      <img class="icon" src="/static/svg/github.svg" />
+      <a href="https://github.com/{{ site.author.github }}"><span>github.com/</span>{{ site.author.github }}</a>
+    </li>
+  </ul>
+</section>
+
+<section class="posts" aria-label="Posts">
+  <h2>Posts</h2>
+
+  {% set posts = search.pages("type=post", "date=desc") %}
+
+  <ul aria-label="List of Posts">
+  {% for post in posts %}
+    {% set title = post.data.metas.title %}
+    {% set url   = post.data.url %}
+    {% set time  = post.data.date | date %}
+  
+    <li aria-label="{{ title }}">
+      <time datetime="{{ time }}" aria-label="Publishing date">{{ time }}</time>
+      <a href="{{ url }}">{{ title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="projects" aria-label="Projects">
+  <h2>Projects</h2>
+
+<ul>
+  {% for project in projects.data %}
+    <li>{{ project.name | dump | safe }}</li>
+  {% endfor %}
+</ul>
+  
+</section>
