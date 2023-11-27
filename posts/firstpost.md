@@ -12,9 +12,7 @@ I'm trying to make a cool little website here!
 Some notes:
 
 1. Had to write that git commit hash thing
-2. Noticed that the
-   [metas documentation on lume](https://lume.land/plugins/metas/) uses
-   `<header>` instead of `<head>`. 
+2. Noticed that the [metas documentation on lume](https://lume.land/plugins/metas/) uses `<header>` instead of `<head>`.  
   a. [fix: metas plugin typos by Aeshus · Pull Request #90 · lumeland/lume.land](https://github.com/lumeland/lume.land/pull/90)  
   b. got a shiki syntax-highlighting plugin on  
   c. noticed plugin docs issues  
