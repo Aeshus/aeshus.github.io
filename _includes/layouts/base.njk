@@ -42,12 +42,12 @@
 
       <footer>
         &copy; 2023 Thomas Wilson
-        <div>Commit <a href="https://github.com/aeshus/aeshus.github.io/commit/{{ git.hash }}">{{ git.hash }}</a></div>
-        <ul>
-          <li><a href="/feed.rss"><img class="icon" src="/static/svg/rss.svg" /></a></li>
-          <li><a href="/feed.xml"><img class="icon" src="/static/svg/atom.svg" /></a></li>
-          <li><a href="/feed.json"><img class="icon" src="/static/svg/jsonfeed.svg" /></a></li>
-          <li><a href="/sitemap.xml"><img class="icon" src="/static/svg/sitemap.svg" /></a></li>
+        <div aria-label="git commit information">Commit <a href="https://github.com/aeshus/aeshus.github.io/commit/{{ git.hash }}">{{ git.hash }}</a></div>
+        <ul aria-label="website feeds">
+          <li><a href="/feed.rss"><img class="icon" alt="rss" src="/static/svg/rss.svg" /></a></li>
+          <li><a href="/feed.xml"><img class="icon" alt="atom" src="/static/svg/atom.svg" /></a></li>
+          <li><a href="/feed.json"><img class="icon" alt="jsonfeed" src="/static/svg/jsonfeed.svg" /></a></li>
+          <li><a href="/sitemap.xml"><img class="icon" alt="sitemap" src="/static/svg/sitemap.svg" /></a></li>
         </ul>
       </footer>
     </div>
