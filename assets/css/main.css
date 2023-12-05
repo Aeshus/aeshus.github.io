@@ -1,0 +1,5 @@
+:root {
+  font-family: Inter, sans;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'case' 1, 'zero' 1, 'ss01' 1, 'ss02' 1;
+  line-height: 1.5;
+}

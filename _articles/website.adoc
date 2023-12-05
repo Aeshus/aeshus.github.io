@@ -1,0 +1,15 @@
+= Wow
+:page-layout: post
+:page-description: Hi
+:revdate: 2023-11-30 08:24:00
+:iconsdir: /assets/icons
+:icons: image
+:icontype: svg
+
+This cool!
+
+== Hmm
+
+Yes
+
+NOTE: Hi :)

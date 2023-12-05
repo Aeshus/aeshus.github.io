@@ -1,0 +1,73 @@
+= Aeshus' Website
+:page-permalink: /colophon
+:page-title: Colophon
+
+This is my personal website!
+
+This is built in Jekyll using https://github.com/asciidoctor/jekyll-asciidoc[Jekyll Asciidoc]
+
+== Technology
+
+* Jekyll 
+* Asciidoctor
+* Jekyll Asciidoc
+* Jekyll Feed
+
+== Hosting
+
+This site is currently hosted on https://pages.github.com/[Github Pages] (which is owned by Microsoft and probably hosted through Microsoft Azure)
+
+Currently there are 3rd-party requests made to https://rsms.me (which uses cloudflare for CDN) for the `inter` font, but I wish to self-host this.
+
+I'm considering moving this site from Github Pages to https://srht.site/[sourcehut pages] as an alternative without all of the microsoft and not super foss-friendly stuff around GH Copilot.
+
+== Commands
+
+|===
+| command | result
+
+| bundle install | install dependencies
+
+| bundle exec jekyll serve | runs local development environment
+
+| bundle exec jekyll build | builds site in _site
+
+|===
+
+== Project Structure
+
+----
+.
+├── assets <.>
+│   ├── css <.>
+│   │   └── main.css
+│   └── icons <.>
+│       └── note.svg
+├── CNAME
+├── _config.yml <.>
+├── _data
+├── Gemfile
+├── _includes <.>
+│   └── nav.html
+├── _layouts <.>
+│   ├── default.html
+│   └── post.html
+├── _pages <.>
+│   ├── 404.adoc
+│   ├── index.adoc
+│   ├── projects.html
+│   └── writings.html
+├── _projects <.>
+├── README.adoc <.>
+└── _writings <.>
+----
+
+<.> All assets, and they're not compiled nor anything else
+<.> Icons, where Asciidoc can find their icons for special elements
+<.> Jekyll config
+<.> Liquid components
+<.> Jekyll page layouts
+<.> Root directory
+<.> All of my projects
+<.> This file (also linked to /colophon)
+<.> All of my writings (articles)

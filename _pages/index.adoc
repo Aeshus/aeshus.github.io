@@ -1,0 +1,27 @@
+= Howdy, I'm Aeshus
+:page-layout: default
+:showtitle:
+:page-liquid:
+
+++++
+
+{% assign note = site.data.notes | sort: 'date' | last %}
+
+<p> Latest Note:</p>
+<p>{{ note.date }}: {{ note.message }}</p>
+
+++++
+
+link:articles[Articles]
+
+link:projects[Projects]
+
+link:contributions[Contributions]
+
+link:microblog[Microblog]
+
+link:notes[Notes]
+
+link:about[About]
+
+link:colophon[Colophon]
