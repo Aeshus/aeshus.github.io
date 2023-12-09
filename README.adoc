@@ -63,6 +63,7 @@ I'm considering moving this site from Github Pages to https://srht.site/[sourceh
 ----
 
 <.> All assets, and they're not compiled nor anything else
+<.> Site CSS
 <.> Icons, where Asciidoc can find their icons for special elements
 <.> Jekyll config
 <.> Liquid components
