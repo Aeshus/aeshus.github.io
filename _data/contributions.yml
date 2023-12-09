@@ -1,0 +1,4 @@
+- name: "Lume.land Docs"
+  date: "2023-12-05"
+  description: "Fixed minor gramatical issues in the metas plugin"
+  url: "https://github.com/lumeland/lume.land/pull/90"
