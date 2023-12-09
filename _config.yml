@@ -21,6 +21,8 @@ feed:
 # Jekyll Asciidoctor
 
 asciidoctor:
+  backend: html5s
+#  template_dir: _templates     # Directory for custom asciidoc html templates
   attributes:
     - page-layout=default      # Default layout for .adoc pages
     - iconsdir=/assets/icons   # Directory for icons
