@@ -21,3 +21,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # For Asciidoc templating
 gem "slim", "~> 5.2"
 gem 'thread_safe'
+
+# For syntax highlighting
+gem 'rouge'

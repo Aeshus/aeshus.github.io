@@ -85,6 +85,7 @@ DEPENDENCIES
   jekyll (~> 4.3.2)
   jekyll-asciidoc
   jekyll-feed (~> 0.12)
+  rouge
   slim (~> 5.2)
   thread_safe
   tzinfo (>= 1, < 3)
