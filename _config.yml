@@ -9,6 +9,18 @@ author:
   name: Aeshus
   email: hi@aeshus.com
 
+defaults:
+  -
+    scope:
+      path: "articles"
+    values:
+      layout: "article"
+  -
+    scope:
+      path: "projects"
+    values:
+      layout: "projects"
+
 safe: false # ???
 
 # Jekyll Feed
@@ -41,3 +53,4 @@ collections:
   pages:
     output: true
     permalink: /:name
+
