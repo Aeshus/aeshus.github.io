@@ -34,12 +34,19 @@ feed:
 
 asciidoctor:
   backend: html5s
-#  template_dir: _templates     # Directory for custom asciidoc html templates
+  template_dir: _templates     # Directory for custom asciidoc html templates
   attributes:
-    - page-layout=default      # Default layout for .adoc pages
-    - iconsdir=/assets/icons   # Directory for icons
-    - icons=image              # Use icons instead of fonts
-    - icontype=svg             # Use SVGs for icons
+    iconsdir: /assets/icons   # Directory for icons
+    icons: image              # Use icons instead of fonts
+    icontype: svg             # Use SVGs for icons
+    sectanchors: ""
+    source-highlighter: rouge
+    rouge-style: /assets/css/theme.css
+    rouge-css: class
+    toc-placement: preamble
+    toc: true@
+    experimental: ''          # Needed for kbd and some other stuff...
+    
 
 # Jekyll Collections
 
