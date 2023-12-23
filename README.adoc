@@ -4,12 +4,12 @@
 
 This is my personal website!
 
-This is built in Jekyll using https://github.com/asciidoctor/jekyll-asciidoc[Jekyll Asciidoc]
-
 == Technology
 
 * Jekyll 
 * Asciidoctor
+** html5s-asciidoctor
+** (With my own edited templates)
 * Jekyll Asciidoc
 * Jekyll Feed
 
@@ -17,7 +17,7 @@ This is built in Jekyll using https://github.com/asciidoctor/jekyll-asciidoc[Jek
 
 This site is currently hosted on https://pages.github.com/[Github Pages] (which is owned by Microsoft and probably hosted through Microsoft Azure)
 
-Currently there are 3rd-party requests made to https://rsms.me (which uses cloudflare for CDN) for the `inter` font, but I wish to self-host this.
+Currently there are 3rd-party requests made to google fonts currently, but I will be switching to self-hosted soon.
 
 I'm considering moving this site from Github Pages to https://srht.site/[sourcehut pages] as an alternative without all of the microsoft and not super foss-friendly stuff around GH Copilot.
 
@@ -38,37 +38,52 @@ I'm considering moving this site from Github Pages to https://srht.site/[sourceh
 
 ----
 .
-├── assets <.>
-│   ├── css <.>
-│   │   └── main.css
-│   └── icons <.>
-│       └── note.svg
+├── _articles <.>
+├── assets
+│   ├── css
+│   │   ├── main.css <.>
+│   │   └── theme.css <.>
+│   ├── icons 
+│   │   └── note.svg
+│   ├── pfp.svg
+│   └── theme.py <.>
 ├── CNAME
-├── _config.yml <.>
-├── _data
+├── _config.yml
+├── _data 
+│   ├── contributions.yml <.>
+│   └── notes.yml <.>
 ├── Gemfile
 ├── _includes <.>
-│   └── nav.html
 ├── _layouts <.>
-│   ├── default.html
-│   └── post.html
 ├── _pages <.>
 │   ├── 404.adoc
+│   ├── articles.html
+│   ├── contributions.html
 │   ├── index.adoc
-│   ├── projects.html
-│   └── writings.html
+│   └── projects.html
 ├── _projects <.>
 ├── README.adoc <.>
-└── _writings <.>
+└── _templates <.>
 ----
 
-<.> All assets, and they're not compiled nor anything else
-<.> Site CSS
-<.> Icons, where Asciidoc can find their icons for special elements
-<.> Jekyll config
-<.> Liquid components
-<.> Jekyll page layouts
-<.> Root directory
-<.> All of my projects
-<.> This file (also linked to /colophon)
-<.> All of my writings (articles)
+<.> My writings/articles/blog posts.
+<.> The actual main themeing for the site.
+<.> The color themes for themeing code blocks
+<.> The pygments code to generate the stylesheet which rouge then uses... Not confusing at all.
+<.> Projects I've contributed to.
+<.> Going to change this to site updates.
+<.> Components
+<.> Layouts
+<.> All of the pages on the ./ directory are put here to unclutter it.
+<.> Coding projects
+<.> This document (served as Colophon).
+<.> Asciidoctor templates to replace the html5s ones that I am using.
+
+== Credits
+
+The theme for this site was inspired by Protesilaos' https://protesilaos.com/emacs/modus-themes[modus themes].
+
+The site design itself was very inspired by:
+
+* https://sayansivakumaran.com/
+* https://bikobatanari.art/
