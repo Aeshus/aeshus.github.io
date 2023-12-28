@@ -1,6 +1,0 @@
-= Hi
-:github: aeshus/aeshus.github.io
-
-Wowzers
-
-{github}
