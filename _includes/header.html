@@ -1,1 +1,18 @@
-<div>Aeshus</div>
+<header>
+  <nav class="navigation-menu">
+    <ul>
+      <li class="name">
+        <a href="/" class="no-underline">
+          Aeshus
+        </a>
+      </li>
+      {% if include.destName %}
+      <li>
+        <a class="button-link no-underline" href="{{ include.destLocation }}">
+          {{ include.destName }}
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>
