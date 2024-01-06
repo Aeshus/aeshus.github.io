@@ -1,0 +1,12 @@
+= Hello World
+:page-description: Hi
+:revdate: 2024-01-24 08:24:00
+
+I just wanted to say, hello world!
+
+This is my first post on here so I just want to lay out some of the things I want to get around to on my website!
+Hopefully it's not too long for y'all to enjoy, but reguardless this is more for me than anyone else!
+
+== Plans
+
+:)
