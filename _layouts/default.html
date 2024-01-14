@@ -4,7 +4,17 @@
     {% include head.html %}
   </head>
   <body>
-    {% include header.html %}
-    {{ content }}
+    <a class="skip-link" href="#skip-to-content">Skip to content</a>
+    
+    {% include header.html destName="Home" destLocation="/" %}
+
+    {{ page.destname }}
+
+    <main>
+      <h1 id="skip-to-content">{{ page.title }}</h1>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
   </body>
 </html>
