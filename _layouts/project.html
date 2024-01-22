@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#skip-to-content">Skip to content</a>
+    
+    {% include header.html destName="Projects" destLocation="/projects" %}
+
+    <main>
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.author.name | default: site.author.name }}
+
+      {{ content }}
+    </main>
+  </body>
+</html>
