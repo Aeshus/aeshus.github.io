@@ -1,0 +1,26 @@
+= About Me
+
+Heya, I'm Aeshus.
+
+I'm a high schooler (for now) who has an interest in programming and computer science!
+
+If you're looking for information _about this website_, go to link:/colophon[colophon].
+
+== Interests
+
+* Guix
+* Rust
+* Scheme
+* "Programming Languages"
+* "Functional Programming"
+
+== Socials
+
+* https://github.com/aeshus[Github]
+* https://gitlab.com/aeshus[Gitlab]
+
+== Contact
+
+Just do hi@aeshus.com.
+
+I might make a PGP key for it eventually...
