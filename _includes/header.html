@@ -1,16 +1,22 @@
+{% assign currentPath = page.url | split: '/' | pop %}
+
+{% assign parentName = currentPath | last %}
+{% if currentPath.size == 1 %}
+  {% assign parentName = "Home" %}
+{% endif %}
+
 <header>
-  <nav class="navigation-menu">
+  <nav class="menu">
     <ul>
-      <li class="name">
-        <a href="/" class="no-underline">
-          Aeshus
+      <li id="home">
+        <a href="/">
+          {{ site.title }}
         </a>
       </li>
-      {% if include.destName %}
-      <li>
-        <a class="button-link no-underline" href="{{ include.destLocation }}">
-          {{ include.destName }}
-        </a>
+
+      {% if page.url != "/index" %}
+      <li id="backLink">
+        <a href="{{ site.url }}{{ currentPath | join: '/' }}">Back to {{ parentName | capitalize }}</a>
       </li>
       {% endif %}
     </ul>

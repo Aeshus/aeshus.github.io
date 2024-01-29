@@ -2,7 +2,7 @@
 
 url: "https://aeshus.com"	# Base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/"			# Subpath of your site, e.g. /blog
-title: "aeshus.com"             # Name of your site, e.g. ACME Corp.
+title: "Aeshus"             # Name of your site, e.g. ACME Corp.
 description: "Programming blog" # Default description of your site, eg. "Programming blog"
 
 author:
