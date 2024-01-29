@@ -1,5 +1,14 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  font-family: Inter, sans;
-  font-feature-settings: 'liga' 1, 'calt' 1, 'case' 1, 'zero' 1, 'ss01' 1, 'ss02' 1;
-  line-height: 1.5;
+  --ff-content: "Chivo", sans-serif;
+  --ff-mono: "Chivo Mono", mono;
+}
+
+body {
+  font-family: var(--ff-content);
 }
