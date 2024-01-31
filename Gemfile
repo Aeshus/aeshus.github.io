@@ -24,3 +24,5 @@ gem 'thread_safe'
 
 # For syntax highlighting
 gem 'rouge'
+
+gem "json", "~> 2.7"
