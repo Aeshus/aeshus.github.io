@@ -104,8 +104,6 @@ function checkForNewDirection(event) {
 
 
   // FILL IN THE REST
-
-  console.log(activeKey);     // uncomment me!
 }
 
 function moveSnake() {
