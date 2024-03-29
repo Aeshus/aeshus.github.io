@@ -1,0 +1,21 @@
+$ff-content: 'Atkinson Hyperlegible', sans-serif;
+$ff-monospace: 'IBM Plex Mono', monospace;
+$ff-display: 'Geo', monospace;
+
+$fs-xl: 48px;
+$lh-xl: 50px;
+
+$fs-lg: 36px;
+$lh-lg: 40px;
+
+$fs-md: 24px;
+$lh-md: 30px;
+
+$fs-sm: 19px;
+$lh-sm: 25px;
+
+$fs-xs: 16px;
+$lh-xs: 20px;
+
+$w-max: $fs-md * 40;
+$w-full: calc(100% - $fs-md * 2);
