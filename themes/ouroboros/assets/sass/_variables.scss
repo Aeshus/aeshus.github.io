@@ -1,6 +1,29 @@
-$ff-content: 'Atkinson Hyperlegible', sans-serif;
-$ff-monospace: 'IBM Plex Mono', monospace;
-$ff-display: 'Geo', monospace;
+$ff-content:
+    "Atkinson Hyperlegible",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    Segoe UI Symbol,
+    "Noto Color Emoji";
+$ff-monospace:
+    "IBM Plex Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
 
 $fs-xl: 48px;
 $lh-xl: 50px;
@@ -19,3 +42,5 @@ $lh-xs: 20px;
 
 $w-max: $fs-md * 40;
 $w-full: calc(100% - $fs-md * 2);
+
+
