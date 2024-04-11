@@ -19,6 +19,15 @@
         rel="stylesheet"
     />
 
+    {{ with resources.Get "favicon.ico" }}
+
+        <link
+            rel="icon"
+            href="data:image/x-icon;base64,{{ .Content | base64Encode }}"
+        />
+    {{ end }}
+
+
     <title>
         {{ if .IsHome }}
             {{ site.Title }}
@@ -28,7 +37,7 @@
     </title>
 
     <script>
-        /* https://github.com/adityatelange/hugo-PaperMod */
+		{{- /* https://github.com/adityatelange/hugo-PaperMod */ -}}
         if (localStorage.getItem("theme") === "dark") {
             document.body.classList.add("dark");
         } else if (localStorage.getItem("theme") === "light") {
@@ -36,8 +45,6 @@
         } else if (window.matchMedia()) {
             document.body.classList.add("dark");
         }
-    </script>
-
-    {{ partialCached "head/css.html" . }}
+    </script> {{ partialCached "head/css.html" . }}
     {{ partialCached "head/js.html" . }}
 </head>
