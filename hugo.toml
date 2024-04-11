@@ -21,7 +21,6 @@ theme = "ouroboros"
     urls = ['.*']
 
 [menus]
-
 [[menus.main]]
 	name = "Aeshus"
 	pageRef = "/"

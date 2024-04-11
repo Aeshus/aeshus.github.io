@@ -3,7 +3,17 @@
 
 header {
     font-family: $ff-content;
-    font-size: $fs-xl;
+    font-size: $fs-md;
+
+	nav {
+		ul {
+			list-style: none;
+		}
+
+		li {
+			display: inline;
+		}
+	}
 }
 
 body {
