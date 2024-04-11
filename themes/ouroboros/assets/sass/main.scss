@@ -2,32 +2,24 @@
 @use "./_variables" as *;
 
 header {
-	font-family: $ff-display;
-	font-size: $fs-xl;
-
-	a {
-		color: inherit;
-		text-shadow: -3px 3px #77817e,-6px 6px #464d4b;
-	}
+    font-family: $ff-content;
+    font-size: $fs-xl;
 }
 
 body {
-	font-family: $ff-content;
+    font-family: $ff-content;
 
-	font-size: $fs-sm;
-	line-height: $lh-sm;
+    font-size: $fs-sm;
+    line-height: $lh-sm;
 
-	> * {
-		max-width: min($w-max, $w-full);
-		margin: auto;
-	}
+    > * {
+        max-width: min($w-max, $w-full);
+        margin: auto;
+    }
 }
 
 footer {
-
 }
 
 main {
-
 }
-

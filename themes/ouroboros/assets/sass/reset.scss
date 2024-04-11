@@ -1,10 +1,15 @@
-*, *::before, *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-img,video,audio,svg {
-	max-width: 100%;
-	height: auto;
+img,
+video,
+audio,
+svg {
+    max-width: 100%;
+    height: auto;
 }
