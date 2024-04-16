@@ -8,6 +8,10 @@ theme = "ouroboros"
 
 [markup.asciidocExt]
   preserveTOC = true
+  [markup.asciidocExt.attributes]
+    source-highlighter = "rouge"
+    rouge-css = "style"
+    rouge-style = "github"
 
 [security]
   enableInlineShortcodes = false
