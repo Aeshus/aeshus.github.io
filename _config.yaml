@@ -5,3 +5,19 @@ description: >-
   Here
 baseurl: ""
 url: ""
+
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  pages:
+    output: true
+    permalink: /:name
+
+
+asciidoctor:
+  template_dir: _templates
+
