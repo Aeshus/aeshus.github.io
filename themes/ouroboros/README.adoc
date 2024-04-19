@@ -1,3 +1,0 @@
-= Ouroboros Theme
-
-This is a simple Hugo theme for my own personal website, link::[aeshus.com].

@@ -81,8 +81,6 @@ I'm considering moving this site from Github Pages to https://srht.site/[sourceh
 
 == Credits
 
-The theme for this site was inspired by Protesilaos' https://protesilaos.com/emacs/modus-themes[modus themes].
-
 The site design itself was very inspired by:
 
 * https://sayansivakumaran.com/
