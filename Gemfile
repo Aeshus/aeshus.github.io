@@ -1,12 +1,15 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem "jekyll", "~> 4.3.3"
+source 'https://rubygems.org'
+
+gem 'jekyll', '~> 4.3.3'
 
 group :jekyll_plugins do
-  gem "jekyll-asciidoc"
+  gem 'jekyll-asciidoc'
+  gem 'asciidoctor'
+  gem 'asciidoctor-html5s'
 end
 
-gem "json", "~> 2.7"
+gem 'json', '~> 2.7'
 
-gem "slim", "~> 5.2.1"
-gem 'concurrent-ruby', '~> 1.2'
+gem 'slim', '~> 5.2.1'
