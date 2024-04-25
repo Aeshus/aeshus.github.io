@@ -21,3 +21,14 @@ collections:
 asciidoctor:
   template_dir: _templates
 
+nav:
+  - title: Aeshus' Home
+    url: /
+  - title: Articles
+    url: /articles
+  - title: Projects
+    url: /projects
+  - title: About
+    url: /about
+  - title: Colophon
+    url: /colophon
