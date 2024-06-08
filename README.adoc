@@ -1,6 +1,7 @@
 = Aeshus' Website
 :page-permalink: /colophon
 :page-title: Colophon
+:revdate: 2024-04-19
 
 This is my personal website!
 
