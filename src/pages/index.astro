@@ -1,0 +1,84 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Heya! Welcome to my home!</h1>
+      <p>
+        This is my personal website, where I write and show off my work! I'm
+        particularly interested in PLT, cybersecurity, and anything that is this
+        week's fad.
+      </p>
+
+      <section>
+        <h2>Articles</h2>
+
+        <p></p>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+      </section>
+
+      <section>
+        <h2>About Me</h2>
+        <aside>Read more on my <a href="/about">about page!</a></aside>
+        <p>
+          I'm <a href="/about">Thomas</a> (he/him), who goes by Aeshus in online
+          circles (either is fine).
+        </p>
+
+        <p>
+          I'm one of those kinds of people who love to talk about programming
+          but never actually get around to it, so this website will have a lot
+          of jumping around! I'm currently interested in <abbr
+            title="Programming Language Theory">PLT</abbr
+          > and Computer Science more broadly. Anything related to legal issues with
+          <abbr title="Free and Open Source Software">FOSS</abbr> or the recent AI
+          craze peaks my interest as well. I really just want to gobble up any knowledge
+          possible!
+        </p>
+
+        <p>
+          I'm mainly working with whatever interests me at any given time, such
+          as Java, Haskell, (Guile) Scheme, Rust, Lua, Clojure, or more
+          recently, C. I constantly bikeshed, and would rather play around with
+          a bunch of different programming languages and paradigms rather than
+          commit to actually learning anything meaningful!
+        </p>
+
+        <p>
+          You can find me on <a href="https://github.com/aeshus">Github</a> where
+          I code. I'm not active on any other "social media" services (except Discord,
+          but that is more for personal communication).
+        </p>
+
+        <h3>Contacting me</h3>
+
+        <p>
+          If you need to reach me for any reason, feel free to <a
+            href="mailto:hi@aeshus.com">email me</a
+          >!
+        </p>
+      </section>
+      <section>
+        <h2>About this website</h2>
+
+        <aside>
+          Read more about my website on my <a href="/colophon">colophon</a>
+        </aside>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
