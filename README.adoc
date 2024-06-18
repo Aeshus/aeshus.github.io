@@ -1,0 +1,88 @@
+= Aeshus' Website
+:page-permalink: /colophon
+:page-title: Colophon
+:revdate: 2024-04-19
+
+This is my personal website!
+
+== Technology
+
+* Jekyll 
+* Asciidoctor
+** html5s-asciidoctor
+** (With my own edited templates)
+* Jekyll Asciidoc
+* Jekyll Feed
+
+== Hosting
+
+This site is currently hosted on https://pages.github.com/[Github Pages] (which is owned by Microsoft and probably hosted through Microsoft Azure)
+
+Currently there are 3rd-party requests made to google fonts currently, but I will be switching to self-hosted soon.
+
+I'm considering moving this site from Github Pages to https://srht.site/[sourcehut pages] as an alternative without all of the microsoft and not super foss-friendly stuff around GH Copilot.
+
+== Commands
+
+|===
+| command | result
+
+| bundle install | install dependencies
+
+| bundle exec jekyll serve | runs local development environment
+
+| bundle exec jekyll build | builds site in _site
+
+|===
+
+== Project Structure
+
+----
+.
+├── _articles <.>
+├── assets
+│   ├── css
+│   │   ├── main.css <.>
+│   │   └── theme.css <.>
+│   ├── icons 
+│   │   └── note.svg
+│   ├── pfp.svg
+│   └── theme.py <.>
+├── CNAME
+├── _config.yml
+├── _data 
+│   ├── contributions.yml <.>
+│   └── notes.yml <.>
+├── Gemfile
+├── _includes <.>
+├── _layouts <.>
+├── _pages <.>
+│   ├── 404.adoc
+│   ├── articles.html
+│   ├── contributions.html
+│   ├── index.adoc
+│   └── projects.html
+├── _projects <.>
+├── README.adoc <.>
+└── _templates <.>
+----
+
+<.> My writings/articles/blog posts.
+<.> The actual main themeing for the site.
+<.> The color themes for themeing code blocks
+<.> The pygments code to generate the stylesheet which rouge then uses... Not confusing at all.
+<.> Projects I've contributed to.
+<.> Going to change this to site updates.
+<.> Components
+<.> Layouts
+<.> All of the pages on the ./ directory are put here to unclutter it.
+<.> Coding projects
+<.> This document (served as Colophon).
+<.> Asciidoctor templates to replace the html5s ones that I am using.
+
+== Credits
+
+The site design itself was very inspired by:
+
+* https://sayansivakumaran.com/
+* https://bikobatanari.art/
