@@ -1,18 +1,14 @@
+# nix devenv
+.devenv
+
 # build output
 dist/
-
-# Local fonts
-fonts/
-
-# cache files
-.eslintcache
 
 # generated types
 .astro/
 
 # dependencies
 node_modules/
-package-lock.json
 
 # logs
 npm-debug.log*
@@ -27,8 +23,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# Local Netlify folder
-.netlify
-
-# Local Vercel folder
-.vercel
+# jetbrains setting folder
+.idea/

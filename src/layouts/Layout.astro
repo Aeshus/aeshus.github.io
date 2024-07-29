@@ -1,0 +1,189 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+import { Image } from 'astro:assets';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<title>{title}</title>
+		<ViewTransitions />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+	<a id="skip" href="#content">Skip to main content</a>
+
+	<header transition:persist>
+		<div aria-label="Site information" class="identifier">
+			<Image src="/favicon.svg" alt="Aeshus' Profile Picture: a monochrome ouroboros eating its own tail. Licensed CC0 from https://commons.wikimedia.org/wiki/File:Ouroboros.svg" height=80 width=80 />
+			<div class="info">
+				<div aria-label="Website name" class="username">Aeshus</div>
+				<div aria-label="Website description"class="tagline">Computer Science & Cybersecurity Student</div>
+			</div>
+		</div>
+
+		<nav aria-label="Navigation list">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/projects">Projects</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+		<main transition:animate="slide" aria-label="Main content" id="content">
+			<slot />
+		</main>
+
+
+	<footer transition:persist aria-label="Footer">
+		<div>
+			&copy; 2023-2024 Aeshus.
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/sitemap-index.xml">Sitemap</a></li>
+				<li><a href="https://github.com/aeshus/aeshus.github.io">Source Code</a></li>
+			</ul>
+		</nav>
+	</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--bg: #1e1e2e;
+		--fg: #cdd6f4;
+		--fg-dim: #a6adc8;
+
+		--link:#89b4fa;
+		--link-dim:;
+	 }
+
+	@media (prefers-color-scheme: light) {
+		:root {
+		--bg:#eff1f5;
+		--fg:#4c4f69;
+		--fg-dim:#6c6f85;
+
+		--link:#1e66f5;
+		--link-dim:;
+		}
+	}
+
+
+	* {
+		box-sizing: border-box;
+		font-family: "Atkinson Hyperlegible", sans-serif; 
+	 }
+
+
+	body {
+		max-width: min(45rem, 100% - 2rem);
+		margin: auto;
+		font-size: 17px;
+		line-height: 1.2;
+		background-color: var(--bg);
+		color: var(--fg);
+	}
+
+	header {
+		margin-top: 2rem;
+	}
+
+	nav ul {
+		padding: 0;
+		display: flex;
+		gap: 1rem;
+	}
+
+	nav li {
+		list-style-type: none;
+	}
+
+	.identifier {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.username {
+		font-size: 200%;
+		font-weight: bold;
+	}
+
+	header img {
+		width: 5rem;
+	}
+
+	img,svg {
+		max-width: 100%;
+	}
+
+	a {
+		color: var(--link);
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a:visited {
+		text-decoration: none;
+		color: var(--link);
+	}
+
+	footer {
+		border-top: 1px solid gray;
+		margin-top: 1rem;
+		padding-top: 1rem;
+	}
+
+	#skip {
+		position: absolute;
+		left: -1000px;
+	}
+
+	#skip:hover, #skip:active, #skip:focus {
+		top: 10px;
+		left: 0;
+	}
+
+	@media print {
+		:root {
+			--link: black;
+		}
+
+		a::after {
+			content: '[' attr(href) ']';
+		}
+
+		body {
+			background-color: white;
+			color: black;
+			max-width: 100%;
+		}
+	}
+
+</style>
